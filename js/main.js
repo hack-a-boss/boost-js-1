@@ -12,6 +12,9 @@ function run() {
   //extraigo tamaño de la ventana del navegador
   const { innerHeight, innerWidth } = window;
 
+  //añado una nube
+  addCloud();
+
   //pongo el globo en opacidad 1
   balloon.style.opacity = 1;
 
@@ -39,7 +42,23 @@ function run() {
     }
   );
 
+  //hacemos que si la animación finaliza se acabe la partida
   currentAnimation.onfinish = endGame;
+}
+
+function addCloud() {
+  //creamos un spam, añadimos una class y un icono de nube
+  const cloud = document.createElement("span");
+  cloud.classList.add("cloud");
+  cloud.textContent = "☁";
+
+  //establecemos tamaño y posición de la nube
+  cloud.style.fontSize = `${2 + Math.random() * 30}rem`;
+  cloud.style.top = `${100 * Math.random()}vh`;
+  cloud.style.left = `${100 * Math.random()}vw`;
+
+  //añadimos la nube al cielo
+  sky.append(cloud);
 }
 
 function endGame() {

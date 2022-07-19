@@ -6,6 +6,7 @@
 
 body {
   overflow: hidden;
+  user-select: none;
 }
 
 main {
@@ -27,5 +28,11 @@ p#score {
   font-weight: bold;
   font-size: 2rem;
   text-align: right;
+  pointer-events: none;
+}
+
+span.cloud {
+  color: white;
+  position: absolute;
   pointer-events: none;
 }
