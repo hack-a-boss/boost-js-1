@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+main {
+  min-height: 100vh;
+  background-color: skyblue;
+}
+
+main #balloon {
+  display: inline-block;
+  cursor: grab;
+  transition: opacity 500ms;
+}
+
+p#score {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: right;
+  pointer-events: none;
+}
