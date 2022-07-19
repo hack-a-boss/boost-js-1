@@ -51,6 +51,8 @@ function endGame() {
 }
 
 function handleBallonClick() {
+  if (balloon.textContent !== ITEM) return;
+
   //aumentamos puntuación
   points++;
 
