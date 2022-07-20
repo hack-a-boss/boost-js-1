@@ -3,6 +3,7 @@ const balloon = document.querySelector("#balloon");
 const score = document.querySelector("#score");
 
 const ITEM = "🎈";
+const ITEM_SAFE = "✨";
 
 let currentAnimation;
 let points = 0;
@@ -76,13 +77,13 @@ function handleBallonClick() {
   points++;
 
   //escribimos puntos en el scoreboard
-  score.textContent = `${points} ✨`;
+  score.textContent = `${points} ${ITEM_SAFE}`;
 
   //pausamos la animacion
   currentAnimation.pause();
 
   //cambiamos icono y opacidad del globo
-  balloon.textContent = "✨";
+  balloon.textContent = ITEM_SAFE;
   balloon.style.opacity = 0;
 
   //aumentamos la velocidad del siguiente globo
